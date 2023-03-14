@@ -9,7 +9,7 @@
 **v_j_calculate.py** calculate gene usage frequency within each subject and resorted CD4 and CD8 to one single .csv file\
 **read_cdr3.py** read cdr3/gene files and alculate gene/cdr3 proportion within each subject in the same time\
 **read_cdr3_2.py** transform the exported file from **read_cdr3.py**\
-**read_csv.py** read and calculate gene/del proportion within each sample\
+**read_csv_del.py** read and calculate gene/del proportion within each sample\
 **read_files.py** add label of gene segment\
 **read_files.py** add label of mutations number\
 **load_data.py** tranfer .csv file to .json for each **gene segment**

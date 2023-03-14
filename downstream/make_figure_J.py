@@ -6,7 +6,6 @@ import seaborn as sns
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
-# subjects_test.txt
 with open('subjects_J.txt') as f:
     subjects = sorted(f.read().split())
 
@@ -18,12 +17,12 @@ colors[4] = sns.hls_palette(12, s=0.9)[5]
 # input data location
 data_path = './J_del/'
 
-# read Chao2 data
+# read CD4 data
 cd4file = os.path.join(data_path, 'J_del_CD4.json')
 with open(cd4file) as f:
     cd4_diversity = json.load(f)
 
-# read Recon data
+# read CD8 data
 cd8_file = os.path.join(data_path, 'J_del_CD8.json')
 with open(cd8_file) as f:
     cd8_diversity = json.load(f)
@@ -33,7 +32,7 @@ sns.set_style('white')
 plt.figure(figsize=(4.75, 4))
 plots = []
 
-# plot the diversity of data
+# plot the mut_frequency
 for color, subject in zip(colors, subjects):
     x_1 = cd4_diversity[subject]
     print(x_1)
@@ -83,7 +82,7 @@ plt.show()
 # plt.tight_layout()
 # plt.savefig('./sequence-diversity-estimation_lineplot_chao2-vs-recon.pdf')
 
-
+# plot stripplot of CD4 and CD8
 cd4_maxes = [{'subject': subject,
               'Mean frequency of Mutations': np.mean(list(cd4_diversity[subject].values())),
               'Cells': 'CD4'} for subject in subjects]

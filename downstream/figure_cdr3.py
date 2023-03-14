@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+# adapted from https://github.com/briney/grp_paper/blob/master/make_figures/01_descriptive-stats.ipynb
 with open('./data/subjects.txt') as f:
     subjects = sorted(f.read().split())
 

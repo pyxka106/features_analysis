@@ -90,7 +90,6 @@ ax.add_artist(legend_1)
 # save or show
 plt.show()
 # plt.tight_layout()
-# plt.savefig('./sequence-diversity-estimation_lineplot_chao2-vs-recon.pdf')
 
 # plot stripplot of CD4 and CD8
 cd4_maxes = [{'subject': subject,
